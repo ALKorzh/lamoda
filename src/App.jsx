@@ -4,7 +4,6 @@ import { React, useCallback, useMemo, useState } from 'react';
 
 import { generateProducts } from './generateData';
 import SearchForm from './components/SearchForm/SearchForm';
-import FilteredList from './components/ProductList/ProductList';
 import Filters from './components/Filters/Filters';
 import ProductList from './components/ProductList/ProductList';
 
@@ -62,9 +61,29 @@ function App() {
   }, []);
   return (
     <div>
-      <SearchForm filters={filters} onFilterChange={handleFilterChange} />
-      <Filters sortType={sortType} onSortChange={handleSortChange} />
-      <ProductList products={filteredProducts} />
+      <div className="search">
+        <SearchForm
+          filters={filters}
+          onFilterChange={handleFilterChange}
+          onSortChange={handleSortChange}
+          sortType={sortType}
+        />
+      </div>
+
+      <div className="products-container">
+        <div className="filters">
+          <Filters
+            sortType={sortType}
+            onSortChange={handleSortChange}
+            filters={filters}
+            onFilterChange={handleFilterChange}
+          />
+          <p>Products on page: {filteredProducts.length}</p>
+        </div>
+        <div className="products">
+          <ProductList products={filteredProducts} />
+        </div>
+      </div>
     </div>
   );
 }

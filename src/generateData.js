@@ -8,12 +8,12 @@ export function generateProducts(count = 50) {
     return {
       id: chance.guid(),
       name: chance.word(),
-      description: chance.sentence({ words: 5 }),
+      description: chance.sentence({ words: 3 }),
       color: chance.pickone(['red', 'blue', 'green', 'yellow', 'black']),
-      category: chance.pickone(['electronics', 'clothing', 'books', 'sports', 'home', 'toys']),
+      // category: chance.pickone(['electronics', 'clothing', 'books', 'sports', 'home', 'toys']),
       price: chance.integer({ min: 10, max: 9999 }),
       rating: Number(chance.floating({ min: 0, max: 5 }).toFixed(1)),
-      imageUrl: `../public/images/1.jpg`,
+      imageUrl: `/assets/${randomImageIndex}.jpg`,
     };
   });
 }

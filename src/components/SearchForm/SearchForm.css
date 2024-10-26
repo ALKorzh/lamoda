@@ -1,0 +1,31 @@
+.searchArea {
+  width: 100%;
+  height: 30px;
+}
+.btns {
+  margin-top: 1%;
+  display: flex;
+  gap: 0.5%;
+}
+.sortBtn {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sortBtn:hover {
+  background-color: rgb(230, 230, 230);
+  transform: translateY(-2px);
+}
+
+.sortBtn:active {
+  background-color: rgb(200, 200, 200);
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}

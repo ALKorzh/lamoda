@@ -1,0 +1,20 @@
+.colorFilters {
+  display: flex;
+  flex-direction: column;
+}
+.priceFilter {
+  width: 100%;
+}
+.filters {
+  width: 150px;
+}
+.priceDiapason {
+  margin: 1% 0;
+  font-weight: bold;
+}
+.priceTitle {
+  margin: 2% 0;
+}
+.colorTitle {
+  margin: 0 0 2% 0;
+}

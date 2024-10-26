@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  width: 85%;
+  margin: 0 auto;
+}
+.products-container {
+  margin-top: 3%;
+  display: flex;
+  gap: 2%;
+}
+.filters {
+  width: 30%;
+}
+
+.search {
+  margin-top: 1%;
+}
