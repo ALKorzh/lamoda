@@ -1,3 +1,8 @@
+/*
+This application uses an additional library 'chance'
+npm install chance
+*/
+
 import './App.css';
 
 import { React, useCallback, useMemo, useState } from 'react';
